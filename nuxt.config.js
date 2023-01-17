@@ -5,7 +5,7 @@ export default {
   target: 'static',
 
   router: {
-    base: '/advanced_matrices_web/'
+    base: '/advanced_raven_matrices/'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
