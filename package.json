@@ -1,0 +1,27 @@
+{
+  "name": "advancedmatricesweb",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "commitdeploy": "git add . && git commit -m \"deploy\" && git push origin main && yarn generate && yarn deploy"
+  },
+  "dependencies": {
+    "@nuxtjs/sitemap": "^2.4.0",
+    "core-js": "^3.19.3",
+    "nuxt": "^2.15.8",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "vuetify": "^2.6.1",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.12.3",
+    "push-dir": "^0.4.1"
+  }
+}
