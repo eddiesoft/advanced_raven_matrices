@@ -137,6 +137,7 @@ export default {
   },
   computed: {
     ...mapGetters({
+      isTestStarted: "test/isTestStarted",
       appropriateList: "test/appropriateList",
       correctList: "test/correctList",
       wrongList: "test/wrongList",
@@ -145,12 +146,13 @@ export default {
     }),
   },
   created() {
-    const answersListCopy = [...this.answersList];
-    const falseListCopy = [...this.falseList];
+    // const answersListCopy = [...this.answersList];
+    // const falseListCopy = [...this.falseList];
 
-    let isEqual =
-      answersListCopy.sort().toString() == falseListCopy.sort().toString();
-    if (isEqual) this.$router.push("/");
+    // let isEqual =
+    //   answersListCopy.sort().toString() == falseListCopy.sort().toString();
+
+    if (!this.isTestStarted) this.$router.push("/");
   },
   methods: {
     getImgUrl(imagePath, isQuestion) {

@@ -110,9 +110,13 @@ export default {
   },
   computed: {
     ...mapGetters({
+      isTestStarted: "test/isTestStarted",
       falseList: "test/falseList",
       answersList: "test/answersList",
     }),
+  },
+  created() {
+    if (!this.isTestStarted) this.$router.push("/");
   },
   methods: {
     ...mapActions({

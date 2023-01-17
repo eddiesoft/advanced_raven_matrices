@@ -1,4 +1,6 @@
 export const state = () => ({
+    // In order to redirect to introduction page if user immediately came to one of other pages
+    isTestStarted: false,
     falseList: [
         2,
         4,
@@ -157,6 +159,9 @@ export const state = () => ({
 })
 
 export const mutations = {
+    CHANGE_IS_TEST_STARTED(state, payload) {
+        state.isTestStarted = payload;
+    },
     ADD(state, { currentItem, selectedOption }) {
         state.answersList.splice(currentItem, 1, selectedOption);
     },
@@ -180,6 +185,9 @@ export const mutations = {
 }
 
 export const actions = {
+    changeIsTestStarted({ commit }, payload) {
+        commit('CHANGE_IS_TEST_STARTED', payload)
+    },
     add({ commit }, payload) {
         commit('ADD', payload)
     },
@@ -201,6 +209,7 @@ export const actions = {
 }
 
 export const getters = {
+    isTestStarted: (state) => state.isTestStarted,
     falseList: (state) => state.falseList,
     answersList: (state) => state.answersList,
     correctAnswersList: (state) => state.correctAnswersList,

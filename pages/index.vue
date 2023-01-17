@@ -18,10 +18,16 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
+
 export default {
   name: "IndexPage",
   methods: {
+    ...mapActions({
+      changeIsTestStarted: "test/changeIsTestStarted",
+    }),
     clickStart() {
+      this.changeIsTestStarted(true);
       this.$router.push("/test");
     },
   },

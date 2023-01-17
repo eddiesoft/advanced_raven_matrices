@@ -40,6 +40,7 @@ export default {
   },
   computed: {
     ...mapGetters({
+      isTestStarted: "test/isTestStarted",
       falseList: "test/falseList",
       correctAnswersList: "test/correctAnswersList",
       iqScoreList: "test/iqScoreList",
@@ -48,12 +49,13 @@ export default {
     }),
   },
   created() {
-    const answersListCopy = [...this.answersList];
-    const falseListCopy = [...this.falseList];
+    // const answersListCopy = [...this.answersList];
+    // const falseListCopy = [...this.falseList];
 
-    let isEqual =
-      answersListCopy.sort().toString() == falseListCopy.sort().toString();
-    if (isEqual) {
+    // let isEqual =
+    //   answersListCopy.sort().toString() == falseListCopy.sort().toString();
+
+    if (!this.isTestStarted) {
       this.$router.push("/");
     } else {
       this.compareAnswers();

@@ -28,7 +28,7 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/advanced_matrices_web/favicon.png' },
+      { rel: 'icon', type: 'image/png', href: '/advanced_raven_matrices/favicon.png' },
       {
         rel: 'stylesheet',
         href: 'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css'
@@ -59,13 +59,13 @@ export default {
     '@nuxtjs/sitemap'
   ],
   sitemap: {
-    hostname: 'https://eddiesoft.github.io/advanced_matrices_web/',
+    hostname: 'https://eddiesoft.github.io/advanced_raven_matrices/',
     gzip: true,
-    exclude: [
-      '/test',
-      '/result',
-      '/mistakes', 
-    ],
+    // exclude: [
+    //   '/test',
+    //   '/result',
+    //   '/mistakes', 
+    // ],
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
