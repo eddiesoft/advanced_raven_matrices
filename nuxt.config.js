@@ -32,8 +32,13 @@ export default {
       {
         rel: 'stylesheet',
         href: 'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css'
+      },
+      {
+        rel: 'canonical',
+        href: 'https://eddiesoft.github.io/advanced_raven_matrices'
       }
     ],
+   
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
